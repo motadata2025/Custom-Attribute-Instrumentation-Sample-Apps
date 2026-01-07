@@ -61,6 +61,3 @@ coverage.html
 # Debugging
 __debug_bin
 
-# Testing Snapshots
-TestingSnapshots/
-

@@ -1,0 +1,200 @@
+basePath: /
+definitions:
+  main.CreateUserRequest:
+    properties:
+      age:
+        type: integer
+      email:
+        example: john.doe@example.com
+        type: string
+      name:
+        example: John Doe
+        type: string
+      username:
+        example: johndoe
+        type: string
+    type: object
+  main.UpdateUserRequest:
+    properties:
+      age:
+        type: integer
+      email:
+        example: john.doe.updated@example.com
+        type: string
+      name:
+        example: John Doe Updated
+        type: string
+    type: object
+  main.User:
+    properties:
+      age:
+        type: integer
+      created_at:
+        example: "2023-10-27T10:00:00Z"
+        type: string
+      email:
+        example: john.doe@example.com
+        type: string
+      name:
+        example: John Doe
+        type: string
+      updated_at:
+        example: "2023-10-27T10:00:00Z"
+        type: string
+      username:
+        example: johndoe
+        type: string
+    type: object
+host: localhost:8081
+info:
+  contact: {}
+  description: This is a simple user management API.
+  title: User Management API
+  version: "1.0"
+paths:
+  /users:
+    get:
+      description: Retrieve a list of all users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/main.User'
+            type: array
+        "500":
+          description: Error getting users
+          schema:
+            type: string
+      summary: Get all users
+      tags:
+      - users
+    post:
+      consumes:
+      - application/json
+      description: Create a new user with the provided details
+      parameters:
+      - description: User to create
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/main.CreateUserRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/main.User'
+        "400":
+          description: Invalid request body or missing fields
+          schema:
+            type: string
+        "500":
+          description: Error creating user
+          schema:
+            type: string
+      summary: Create a new user
+      tags:
+      - users
+  /users/{username}:
+    delete:
+      description: Delete a user by their username
+      parameters:
+      - description: Username of the user to delete
+        in: path
+        name: username
+        required: true
+        type: string
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Invalid username
+          schema:
+            type: string
+        "404":
+          description: User not found
+          schema:
+            type: string
+        "500":
+          description: Error deleting user
+          schema:
+            type: string
+      summary: Delete a user
+      tags:
+      - users
+    get:
+      description: Retrieve a user's details by their username
+      parameters:
+      - description: Username of the user to retrieve
+        in: path
+        name: username
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.User'
+        "400":
+          description: Invalid username
+          schema:
+            type: string
+        "404":
+          description: User not found
+          schema:
+            type: string
+        "500":
+          description: Error getting user
+          schema:
+            type: string
+      summary: Get a user by username
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      description: Update an existing user's details by their username
+      parameters:
+      - description: Username of the user to update
+        in: path
+        name: username
+        required: true
+        type: string
+      - description: User update details
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/main.UpdateUserRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.User'
+        "400":
+          description: Invalid username or request body
+          schema:
+            type: string
+        "404":
+          description: User not found
+          schema:
+            type: string
+        "500":
+          description: Error updating user
+          schema:
+            type: string
+      summary: Update an existing user
+      tags:
+      - users
+schemes:
+- http
+swagger: "2.0"

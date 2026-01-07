@@ -1,0 +1,40 @@
+### IntelliJ IDEA ###
+out/
+*.iml
+.idea/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+### Build artifacts ###
+build/
+out/
+*.jar
+*.class
+
+### Dependencies ###
+*.jar
+
+# Allow the Testing Snapshots directory and its contents
+!/Testing Snapshots/
+!/Testing Snapshots/**

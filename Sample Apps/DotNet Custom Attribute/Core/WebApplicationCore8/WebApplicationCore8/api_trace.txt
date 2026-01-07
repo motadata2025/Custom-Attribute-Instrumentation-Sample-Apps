@@ -1,0 +1,689 @@
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5035
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/shiven-patel/Desktop/Open Telemetry/Custom Attribute/DotNet Custom Attribute/Core/WebApplicationCore8/WebApplicationCore8
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (84ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT p."Id", p."Barcode", p."Categories", p."Dimensions", p."Discount", p."Flags", p."IsAvailable", p."Name", p."Price", p."Quantity", p."Ratings", p."Serials", p."Tags", p."Weight"
+      FROM "Products" AS p
+Activity.TraceId:            e4ca9aef9adc25a74b6b44c43e263b96
+Activity.SpanId:             9788f94866b731fc
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       43b4397577bcac0e
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:46:29.3616883Z
+Activity.Duration:           00:00:00.1374268
+Activity.Tags:
+    db.system: postgresql
+    server.address: tcp://localhost:5432
+    db.name: productdb
+Instrumentation scope (ActivitySource):
+    Name: OpenTelemetry.Instrumentation.EntityFrameworkCore
+    Version: 1.11.0-beta.2
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            e4ca9aef9adc25a74b6b44c43e263b96
+Activity.SpanId:             68eb318373b0f6d2
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       9788f94866b731fc
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:46:29.4227399Z
+Activity.Duration:           00:00:00.4708946
+Activity.Tags:
+    db.system: postgresql
+    db.connection_string: Host=localhost;Port=5432;Database=productdb;Username=postgres
+    db.user: postgres
+    db.name: productdb
+    db.statement: SELECT p."Id", p."Barcode", p."Categories", p."Dimensions", p."Discount", p."Flags", p."IsAvailable", p."Name", p."Price", p."Quantity", p."Ratings", p."Serials", p."Tags", p."Weight"
+FROM "Products" AS p
+    db.connection_id: 349438
+    net.transport: ip_tcp
+    net.peer.ip: 127.0.0.1
+    net.peer.name: localhost
+    StatusCode: OK
+Activity.Events:
+    received-first-response [12/16/2025 1:46:29 PM +00:00]
+Instrumentation scope (ActivitySource):
+    Name: Npgsql
+    Version: 0.1.0
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            e4ca9aef9adc25a74b6b44c43e263b96
+Activity.SpanId:             43b4397577bcac0e
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Products
+Activity.Kind:               Server
+Activity.StartTime:          2025-12-16T13:46:27.2148688Z
+Activity.Duration:           00:00:02.9475354
+Activity.Tags:
+    server.address: localhost
+    server.port: 5035
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/Products
+    network.protocol.version: 1.1
+    user_agent.original: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    apm.operation: list_products
+    apm.user_id: anonymous
+    apm.endpoint: GetProducts
+    apm.result_count: 24
+    apm.result: success
+    http.route: api/Products
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (36ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = Object), @p2='?' (DbType = Object), @p3='?' (DbType = Single), @p4='?' (DbType = Object), @p5='?' (DbType = Boolean), @p6='?', @p7='?' (DbType = Double), @p8='?' (DbType = Int32), @p9='?' (DbType = Object), @p10='?' (DbType = Object), @p11='?' (DbType = Object), @p12='?' (DbType = Single)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("Barcode", "Categories", "Dimensions", "Discount", "Flags", "IsAvailable", "Name", "Price", "Quantity", "Ratings", "Serials", "Tags", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+Activity.TraceId:            2105668f0bf344846806f23c2cfa3a86
+Activity.SpanId:             72fc438b6ef56e88
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       22dc40c832dfc845
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:47:15.5332567Z
+Activity.Duration:           00:00:00.0434528
+Activity.Tags:
+    db.system: postgresql
+    server.address: tcp://localhost:5432
+    db.name: productdb
+Instrumentation scope (ActivitySource):
+    Name: OpenTelemetry.Instrumentation.EntityFrameworkCore
+    Version: 1.11.0-beta.2
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            2105668f0bf344846806f23c2cfa3a86
+Activity.SpanId:             a7033018a74baec1
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       72fc438b6ef56e88
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:47:15.5483201Z
+Activity.Duration:           00:00:00.0630680
+Activity.Tags:
+    db.system: postgresql
+    db.connection_string: Host=localhost;Port=5432;Database=productdb;Username=postgres
+    db.user: postgres
+    db.name: productdb
+    db.statement: INSERT INTO "Products" ("Barcode", "Categories", "Dimensions", "Discount", "Flags", "IsAvailable", "Name", "Price", "Quantity", "Ratings", "Serials", "Tags", "Weight")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+RETURNING "Id";
+
+    db.connection_id: 349438
+    net.transport: ip_tcp
+    net.peer.ip: 127.0.0.1
+    net.peer.name: localhost
+    StatusCode: OK
+Activity.Events:
+    received-first-response [12/16/2025 1:47:15 PM +00:00]
+Instrumentation scope (ActivitySource):
+    Name: Npgsql
+    Version: 0.1.0
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            2105668f0bf344846806f23c2cfa3a86
+Activity.SpanId:             22dc40c832dfc845
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Products
+Activity.Kind:               Server
+Activity.StartTime:          2025-12-16T13:47:15.2708780Z
+Activity.Duration:           00:00:00.4208475
+Activity.Tags:
+    server.address: localhost
+    server.port: 5035
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/Products
+    network.protocol.version: 1.1
+    user_agent.original: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    apm.operation: create_product
+    apm.user_id: anonymous
+    apm.endpoint: PostProduct
+    apm.product_name: Mechanical Keyboard RGB
+    apm.product_price: 129.99
+    apm.product_quantity: 75
+    apm.product_available: true
+    apm.product_id: 28
+    apm.result: success
+    apm.status: created
+    http.route: api/Products
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT p."Id", p."Barcode", p."Categories", p."Dimensions", p."Discount", p."Flags", p."IsAvailable", p."Name", p."Price", p."Quantity", p."Ratings", p."Serials", p."Tags", p."Weight"
+      FROM "Products" AS p
+      WHERE p."Id" = @__p_0
+      LIMIT 1
+Activity.TraceId:            40f68b38c8007d5d7b12fd058a632b99
+Activity.SpanId:             e993bc0a14a4d8d0
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       c1e995bceb9b5469
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:50:13.6253245Z
+Activity.Duration:           00:00:00.0008816
+Activity.Tags:
+    db.system: postgresql
+    server.address: tcp://localhost:5432
+    db.name: productdb
+Instrumentation scope (ActivitySource):
+    Name: OpenTelemetry.Instrumentation.EntityFrameworkCore
+    Version: 1.11.0-beta.2
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            40f68b38c8007d5d7b12fd058a632b99
+Activity.SpanId:             4388dc6fc17805a0
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       e993bc0a14a4d8d0
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:50:13.6254587Z
+Activity.Duration:           00:00:00.0012104
+Activity.Tags:
+    db.system: postgresql
+    db.connection_string: Host=localhost;Port=5432;Database=productdb;Username=postgres
+    db.user: postgres
+    db.name: productdb
+    db.statement: SELECT p."Id", p."Barcode", p."Categories", p."Dimensions", p."Discount", p."Flags", p."IsAvailable", p."Name", p."Price", p."Quantity", p."Ratings", p."Serials", p."Tags", p."Weight"
+FROM "Products" AS p
+WHERE p."Id" = @__p_0
+LIMIT 1
+    db.connection_id: 349438
+    net.transport: ip_tcp
+    net.peer.ip: 127.0.0.1
+    net.peer.name: localhost
+    StatusCode: OK
+Activity.Events:
+    received-first-response [12/16/2025 1:50:13 PM +00:00]
+Instrumentation scope (ActivitySource):
+    Name: Npgsql
+    Version: 0.1.0
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            40f68b38c8007d5d7b12fd058a632b99
+Activity.SpanId:             c1e995bceb9b5469
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Products/{id}
+Activity.Kind:               Server
+Activity.StartTime:          2025-12-16T13:50:13.6207922Z
+Activity.Duration:           00:00:00.0063839
+Activity.Tags:
+    server.address: localhost
+    server.port: 5035
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/Products/1
+    network.protocol.version: 1.1
+    user_agent.original: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    apm.operation: get_product
+    apm.product_id: 1
+    apm.user_id: anonymous
+    apm.endpoint: GetProduct
+    apm.result: success
+    apm.product_name: Laptop Pro 15
+    apm.product_price: 1499.99
+    apm.product_available: true
+    apm.product_quantity: 50
+    http.route: api/Products/{id}
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            11daaab7c5ef54fc95c4dad3cab2ccd6
+Activity.SpanId:             e4086aaf0078e258
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        PUT api/Products/{id}
+Activity.Kind:               Server
+Activity.StartTime:          2025-12-16T13:51:20.9416632Z
+Activity.Duration:           00:00:00.0392568
+Activity.Tags:
+    server.address: localhost
+    server.port: 5035
+    http.request.method: PUT
+    url.scheme: http
+    url.path: /api/Products/28
+    network.protocol.version: 1.1
+    user_agent.original: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    apm.operation: update_product
+    apm.product_id: 28
+    apm.user_id: anonymous
+    apm.endpoint: PutProduct
+    apm.result: bad_request
+    apm.error_reason: id_mismatch
+    http.route: api/Products/{id}
+    http.response.status_code: 400
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            452a1a692df757fd2143b102cfaca70c
+Activity.SpanId:             cae08587533cd504
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       16caf42409d56b13
+Activity.DisplayName:        productdb
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT p."Id", p."Barcode", p."Categories", p."Dimensions", p."Discount", p."Flags", p."IsAvailable", p."Name", p."Price", p."Quantity", p."Ratings", p."Serials", p."Tags", p."Weight"
+      FROM "Products" AS p
+      WHERE p."Id" = @__p_0
+      LIMIT 1
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:52:16.0133253Z
+Activity.Duration:           00:00:00.0009713
+Activity.Tags:
+    db.system: postgresql
+    server.address: tcp://localhost:5432
+    db.name: productdb
+Instrumentation scope (ActivitySource):
+    Name: OpenTelemetry.Instrumentation.EntityFrameworkCore
+    Version: 1.11.0-beta.2
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            452a1a692df757fd2143b102cfaca70c
+Activity.SpanId:             56e7e45c803afade
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       cae08587533cd504
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:52:16.0134462Z
+Activity.Duration:           00:00:00.0017951
+Activity.Tags:
+    db.system: postgresql
+    db.connection_string: Host=localhost;Port=5432;Database=productdb;Username=postgres
+    db.user: postgres
+    db.name: productdb
+    db.statement: SELECT p."Id", p."Barcode", p."Categories", p."Dimensions", p."Discount", p."Flags", p."IsAvailable", p."Name", p."Price", p."Quantity", p."Ratings", p."Serials", p."Tags", p."Weight"
+FROM "Products" AS p
+WHERE p."Id" = @__p_0
+LIMIT 1
+    db.connection_id: 350446
+    net.transport: ip_tcp
+    net.peer.ip: 127.0.0.1
+    net.peer.name: localhost
+    StatusCode: OK
+Activity.Events:
+    received-first-response [12/16/2025 1:52:16 PM +00:00]
+Instrumentation scope (ActivitySource):
+    Name: Npgsql
+    Version: 0.1.0
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            452a1a692df757fd2143b102cfaca70c
+Activity.SpanId:             09daddbfd4a7199a
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "Products"
+      WHERE "Id" = @p0;
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       16caf42409d56b13
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:52:16.0161491Z
+Activity.Duration:           00:00:00.0085561
+Activity.Tags:
+    db.system: postgresql
+    server.address: tcp://localhost:5432
+    db.name: productdb
+Instrumentation scope (ActivitySource):
+    Name: OpenTelemetry.Instrumentation.EntityFrameworkCore
+    Version: 1.11.0-beta.2
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            452a1a692df757fd2143b102cfaca70c
+Activity.SpanId:             96d8dcc4972883ac
+Activity.TraceFlags:         Recorded
+Activity.ParentSpanId:       09daddbfd4a7199a
+Activity.DisplayName:        productdb
+Activity.Kind:               Client
+Activity.StartTime:          2025-12-16T13:52:16.0162811Z
+Activity.Duration:           00:00:00.0087756
+Activity.Tags:
+    db.system: postgresql
+    db.connection_string: Host=localhost;Port=5432;Database=productdb;Username=postgres
+    db.user: postgres
+    db.name: productdb
+    db.statement: DELETE FROM "Products"
+WHERE "Id" = @p0;
+
+    db.connection_id: 350446
+    net.transport: ip_tcp
+    net.peer.ip: 127.0.0.1
+    net.peer.name: localhost
+    StatusCode: OK
+Activity.Events:
+    received-first-response [12/16/2025 1:52:16 PM +00:00]
+Instrumentation scope (ActivitySource):
+    Name: Npgsql
+    Version: 0.1.0
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute
+
+Activity.TraceId:            452a1a692df757fd2143b102cfaca70c
+Activity.SpanId:             16caf42409d56b13
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        DELETE api/Products/{id}
+Activity.Kind:               Server
+Activity.StartTime:          2025-12-16T13:52:16.0119887Z
+Activity.Duration:           00:00:00.0139986
+Activity.Tags:
+    server.address: localhost
+    server.port: 5035
+    http.request.method: DELETE
+    url.scheme: http
+    url.path: /api/Products/25
+    network.protocol.version: 1.1
+    user_agent.original: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+    apm.operation: delete_product
+    apm.product_id: 25
+    apm.user_id: anonymous
+    apm.endpoint: DeleteProduct
+    apm.product_name: Mechanical Keyboard RGB
+    apm.product_price: 129.99
+    apm.result: success
+    apm.status: deleted
+    http.route: api/Products/{id}
+    http.response.status_code: 204
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    os.type: linux
+    os.description: Ubuntu 24.04.3 LTS
+    os.build_id: 6.14.0-37-generic
+    os.name: Ubuntu
+    os.version: 24.04
+    host.name: shiven-patel-ThinkPad-T14s-Gen-1
+    host.id: 46bad63bee864a739c5c8774bf21ddfc
+    process.owner: shiven-patel
+    process.pid: 349202
+    process.runtime.description: .NET 8.0.22
+    process.runtime.name: .NET
+    process.runtime.version: 8.0.22
+    container.id: 329016
+    telemetry.distro.name: opentelemetry-dotnet-instrumentation
+    telemetry.distro.version: 1.11.0
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.2
+    service.name: DotNeCore8tCustomAttribute

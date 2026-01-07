@@ -1,0 +1,6 @@
+@WebApplicationCore9_HostAddress = http://localhost:5255
+
+GET {{WebApplicationCore9_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
